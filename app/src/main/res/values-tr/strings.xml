@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Flaş Ve Widget</string>
+
+    <string name="action_about">Hakkında</string>
+    <string name="action_rate">Google Play\'de Oylayın</string>
+
+    <string name="about_title_simpleflashlightandwidget">Simple Flashlight And Widget</string>
+    <string name="about_simpleflashlightandwidget">Bu mobil uygulama Emre Baran tarafından tasarlanmış ve kodlanmıştır. Bazı ikonlar ve görseller CC-BY Lisansı\'na sahiptir. Bir kısmının kişisel ve ticari kullanımı serbesttir. Az bir kısmı Emre Baran tarafından tasarlanmıştır.</string>
+    <string name="about_title_special_thanks">Özel Teşekkür</string>
+    <string name="about_special_thanks">Kartik Domadiya : Widget örneği için teşekkürler.</string>
+    <string name="about_title_application">Uygulama Hakkında</string>
+    <string name="about_application">Bu uygulama açık-kaynak bir yazılımdır. Kaynak kodları GitHub\'da bulabilirsiniz: mree58 \nFikirlerinizi paylaşmak istiyorsanız veya uygulama ile ilgili sorun yaşıyorsanız lütfen iletişime geçin. Mail: emrebaran.ceng@gmail.com</string>    <string name="about_title_permissions">İzinler Hakkında</string>
+    <string name="about_permissions">CAMERA: flaşı kullanabilmek için</string>
+    <string name="about_application_version">Uygulama Versiyonu: 1.1.0</string>
+    <string name="about_supported_languages">Desteklenen Diller: English, Türkçe</string>
+
+    <string name="no_camera">Hata ! Kamera bulunamadı</string>
+    <string name="no_flash">Hata ! Flaş bulunamadı</string>
+
+    <string name="app_exit">Çıkmak için tekrar basın</string>
+
+    <string name="str_widget">Anasayfanıza widget yerleştirmek için widgetler menüsüne gidin ve bu uygulamayı seçin</string>
+
+    <string name="permissions_title">İzin Gerekli !</string>
+    <string name="permissions_message">Bu uygulama kamera flaşını kullanabilmek için izne ihtiyaç duymaktadır.</string>
+    <string name="permissions_grant">İzin Ver</string>
+    <string name="permissions_cancel">İptal</string>
+    <string name="permissions_goto">Kameraya izin vermek için izin ayarlarına gidin</string>
+    <string name="permissions_unable">İzin alınamadı !</string>
+
+</resources>
