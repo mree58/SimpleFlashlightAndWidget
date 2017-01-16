@@ -36,7 +36,6 @@ import java.lang.reflect.Field;
 public class FlashActivity extends AppCompatActivity {
 
     private boolean isLightOn = false;
-    private Camera camera;
 
     DisplayMetrics metrics;
 
@@ -48,6 +47,7 @@ public class FlashActivity extends AppCompatActivity {
     String[] permissionsRequired = new String[]{Manifest.permission.CAMERA};
 
     Parameters p;
+    Camera camera;
 
     @Override
     protected void onStop() {
@@ -86,6 +86,7 @@ public class FlashActivity extends AppCompatActivity {
             startActivity(myIntent);
         }
         else {
+            Log.d("else","else");
 
             camera = Camera.open();
             p = camera.getParameters();
@@ -104,19 +105,29 @@ public class FlashActivity extends AppCompatActivity {
                     }
                     else {
 
-                        camera = Camera.open();
-                        p = camera.getParameters();
+                        Log.d("granted","granted");
+
 
                         if (isLightOn) {
+
+                            Log.d("isLightOn","isLightOn");
 
                             p.setFlashMode(Parameters.FLASH_MODE_OFF);
                             camera.setParameters(p);
                             camera.stopPreview();
+                            camera.release();
+                            camera = null;
                             isLightOn = false;
 
                             btnFlash.setImageResource(R.mipmap.off);
 
                         } else {
+
+                            Log.d("isLightOff","isLightOff");
+
+
+                            camera = Camera.open();
+                            p = camera.getParameters();
 
                             p.setFlashMode(Parameters.FLASH_MODE_TORCH);
 
@@ -147,6 +158,19 @@ public class FlashActivity extends AppCompatActivity {
 
     }
 
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (camera != null) {
+
+                camera.release();
+                camera = null;
+                isLightOn = false;
+
+        }
+    }
 
 
     private void showPopupAbout() {
